@@ -27,6 +27,9 @@ export default {
     },
     methods: {
         newQuote(quote) {
+            if (!quote) {
+                return alert("Empty Quotes are not allowed!");
+            }
             if (this.quotes.length >= this.maxQuotes) {
                 return alert('Max Quotes reached! Delete one first to add new.');
             }
